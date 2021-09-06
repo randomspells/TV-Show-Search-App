@@ -1,0 +1,15 @@
+{
+  "name": "tv-show-search-app",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Small app built using the TV Maze API that allows user to search for TV shows and view detailed info about them",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "June Again",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
+}

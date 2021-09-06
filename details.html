@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card card-big">
+    <a class="breadcrumb" href="index.html"> <i class="fas fa-arrow-left"></i> Back to search</a>
+    <div class="row">
+      <div id="show-cover" class="cover-big"></div>
+      <div class="col">
+        <span id="show-rating"></span>
+        <h2 id="show-name"></h2>
+        <ul id="show-info">
+          <li class="show-genres"></li>
+          <li class="show-language"></li>
+          <li class="show-premiered"></li>
+          <li class="show-status"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p id="show-description"></p>
+    </div>
+
+  </div>
+
+  <script type="module" src="details.js"></script>
+</body>
+
+</html>
