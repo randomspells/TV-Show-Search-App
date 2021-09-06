@@ -30,7 +30,6 @@ export const getFromLocalStorage = () => {
 
   if (searchResult) {
     const localStorageData = { searchResult, searchQuery, showDetails };
-    console.dir(localStorageData);
     return localStorageData;
   } else return {};
 };

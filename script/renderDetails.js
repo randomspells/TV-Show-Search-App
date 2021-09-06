@@ -26,7 +26,6 @@ const renderDetails = () => {
     info.children[1].innerHTML = `<b>Language:</b> ${language ?? "tbc"}`;
     info.children[2].innerHTML = `<b>Premiered at:</b> ${premiered ?? "tbc"}`;
     info.children[3].innerHTML = `<b>Status:</b> ${status ?? "tbc"}`;
-    console.dir(info.children[0].innerHTML);
 
     const description = document.querySelector("#show-description");
     description.innerHTML = showDetails.summary ?? "Description is not found.";

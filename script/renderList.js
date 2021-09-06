@@ -8,7 +8,7 @@ export const clearShows = () => {
 
 export const renderShows = (data) => {
   const resultsCount = document.querySelector("#results-count");
-  resultsCount.innerHTML = `${data.length} results`;
+  resultsCount.innerHTML = `<span>${data.length}</span> result(s)`;
   const wrapper = document.querySelector("#results-list");
 
   data.map(({show}) => {
@@ -39,6 +39,7 @@ export const renderShows = (data) => {
     card.appendChild(name);
 
     const rating = document.createElement("span");
+    rating.id = "show-rating";
     rating.innerHTML = scoreReducer(show.rating.average);
     card.appendChild(rating);
   });

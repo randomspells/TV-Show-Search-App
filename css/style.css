@@ -14,7 +14,7 @@ html {
   --accent-color: rgb(245, 161, 52);
   --dark-shadow: 0 0 5px 0 rgba(24, 24, 24, 0.9);
   --light-shadow: 0 0 5px 0 rgba(24, 24, 24, 0.4);
-  --ease-in: all 0.4s ease-in;
+  --animation: all 0.4s;
 }
 
 h1 {
@@ -77,9 +77,6 @@ a {
 }
 
 span {
-  display: block;
-  font-size: 3rem;
-  line-height: 2rem;
   color: var(--accent-color);
 }
 
@@ -157,6 +154,37 @@ p {
   text-align: left;
 }
 
+#show-rating {
+  display: block;
+  font-size: 3rem;
+  line-height: 2rem;
+}
+
+/* Card animation */
+
+.diagonal {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.diagonal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100rem;
+  height: 100rem;
+  background: var(--accent-color);
+  transform: translateX(-85rem) translateY(-84rem) rotate(45deg);
+  z-index: -1;
+  transition: var(--animation);
+}
+
+.diagonal:hover::after {
+  transform: translateY(-70rem) translateX(-74rem) rotate(45deg);
+}
+
 /* Search results */
 
 #results-list {
@@ -187,28 +215,6 @@ p {
   font-size: 1.4rem;
 }
 
-.diagonal {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.diagonal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100rem;
-  height: 100rem;
-  background: var(--accent-color);
-  transform: translateX(-85rem) translateY(-84rem) rotate(45deg);
-  z-index: -1;
-  transition: transform 0.4s;
-}
-
-.diagonal:hover::after {
-  transform: translateY(-70rem) translateX(-74rem) rotate(45deg);
-}
 
 /* Media queries */
 
@@ -216,7 +222,7 @@ p {
   #results-list {
     justify-content: center;
   }
-  
+
   .row {
     flex-wrap: wrap;
     flex-direction: column;
@@ -247,6 +253,6 @@ p {
   }
 
   .card-small {
-   justify-content: center;
+    justify-content: center;
   }
 }

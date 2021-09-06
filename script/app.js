@@ -23,7 +23,6 @@ form.addEventListener("submit", async (e) => {
       const searchResult = await findShows(searchQuery);
       saveToLocalStorage(searchResult, searchQuery);
       renderShows(searchResult);
-      console.log(searchResult);
     } catch (e) {
       console.log(e.message);
     }
