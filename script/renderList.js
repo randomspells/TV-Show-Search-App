@@ -1,5 +1,5 @@
 import { saveToLocalStorage } from "./localStorage.js";
-import { scoreReducer } from "./helpers.js";
+import { ratingReducer } from "./helpers.js";
 
 export const clearShows = () => {
   const wrapper = document.querySelector("#results-list");
@@ -40,7 +40,7 @@ export const renderShows = (data) => {
 
     const rating = document.createElement("span");
     rating.id = "show-rating";
-    rating.innerHTML = scoreReducer(show.rating.average);
+    rating.innerHTML = ratingReducer(show.rating.average);
     card.appendChild(rating);
   });
 };

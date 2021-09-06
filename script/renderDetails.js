@@ -1,5 +1,5 @@
 import { getFromLocalStorage } from "./localStorage.js";
-import { scoreReducer } from "./helpers.js";
+import { ratingReducer } from "./helpers.js";
 
 const { showDetails } = getFromLocalStorage();
 
@@ -9,7 +9,7 @@ const renderDetails = () => {
     name.innerHTML = showDetails.name;
 
     const rating = document.querySelector("#show-rating");
-    rating.innerHTML = scoreReducer(showDetails.rating.average);
+    rating.innerHTML = ratingReducer(showDetails.rating.average);
 
     const cover = document.querySelector("#show-cover");
     const templateImgUrl = "./img/template-movie.jpg";

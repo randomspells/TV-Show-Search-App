@@ -62,13 +62,14 @@ button {
   padding: 1rem 1.5rem;
   color: var(--dark-color);
   background-color: var(--accent-color);
+  transition: var(--animation);
 }
 
 button:hover {
   cursor: pointer;
   color: var(--accent-color);
   background-color: var(--dark-color);
-  transition: var(--ease-in);
+
 }
 
 a {
@@ -156,7 +157,7 @@ p {
 
 #show-rating {
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 2rem;
 }
 
@@ -196,17 +197,20 @@ p {
   margin-left: 1.5rem;
 }
 
-/* Show details */
+/* TV show details */
 
 .breadcrumb {
   font-size: 1.5rem;
   color: var(--dark-color);
-  transform: translate(0px);
-  transition: all 0.9s;
+  border-bottom: 0px solid transparent;
 }
 
-.breadcrumb:hover {
-  transform: translate(10px);
+.breadcrumb svg {
+  transition: var(--animation);
+}
+
+.breadcrumb:hover svg {
+  color: var(--accent-color);
 }
 
 #show-info {
